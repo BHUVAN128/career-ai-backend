@@ -13,6 +13,9 @@ async def health_check():
         "app": settings.APP_NAME,
         "environment": settings.ENVIRONMENT,
     }
+@router.head("/health")
+async def health_head():
+    return
 
 
 @router.get("/ready")
